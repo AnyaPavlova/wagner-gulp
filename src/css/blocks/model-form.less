@@ -1,0 +1,152 @@
+.model-form {
+	background: url(../images/model-form-bg.jpg) center top no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-top: 70px;
+	padding-bottom: 80px;
+
+	.inner {
+		@media screen and (max-width:500px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	@media screen and (max-width:992px) {
+		background-position: left top;
+	}
+	@media screen and (max-width:680px) {
+		padding-top: 25px;
+		padding-bottom: 40px;
+		background: #dee1e3;	
+	}
+
+	&__container {
+		width: 58%;
+		margin-right: 42%;
+		position: relative;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		@media screen and (max-width:992px) {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 23px;
+		letter-spacing: -0.025em;
+		font-weight: 700;
+		padding-top: 20px;
+		@media screen and (max-width:680px) {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+	&__item {
+		width: 50%;
+		float: left;
+
+		&:nth-child(2n-1) { padding-right: 15px; }
+		&:nth-child(2n) { padding-left: 15px; }
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+			float: none;
+
+			&:nth-child(2n-1) { padding-right: 0; }
+			&:nth-child(2n) { padding-left: 0; }
+		}
+	}
+	&__agree {
+		float: right;
+		padding-left: 15px;
+		width: 50%;
+		text-align: center;
+
+		@media screen and (max-width:680px) {
+			width: 100%;
+			float: none;
+			padding-left: 0;
+		}
+	}
+	&__title {
+		font-size: 28px;
+		line-height: 33px;
+		@media screen and (max-width:680px) {
+			font-size: 21px;
+			line-height: 25px;
+		}
+	}
+	&__form {
+		padding-top: 40px;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		@media screen and (max-width:680px) {
+			padding-top: 30px;
+		}
+
+		.wagnerform__input {
+			margin-bottom: 30px;
+
+			@media screen and (max-width:500px) {
+				margin-bottom: 15px;
+			}
+		}
+		.wagnerform__btn {
+			padding-top: 15px;
+			padding-bottom: 16px;
+			margin-bottom: 15px;
+		}
+
+	}
+	&__success {
+		display: none;
+		width: 100%;
+		position: absolute;
+		bottom: -55px;
+		left: 0;
+
+		font-size: 23px;
+		line-height: 1;
+		letter-spacing: -0.025em;
+		font-weight: 700;
+
+		text-align: center;
+		
+
+		@media screen and (max-width:680px) {
+			height: 100%;
+			top: 0;	
+			bottom: auto;		
+			z-index: 2;
+			background: #dee1e3;	
+			padding-top: 10%;
+			font-size: 23px;
+			line-height: 27px;
+			letter-spacing: -0.025em;
+			font-weight: 700;
+
+			text-align: center;
+			
+
+			p {
+				margin-bottom: 30px;
+			}
+		}
+		@media screen and (max-width:500px) {
+			padding-top: 30%;
+		}
+	}
+}

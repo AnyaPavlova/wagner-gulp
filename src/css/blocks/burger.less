@@ -1,0 +1,22 @@
+.burger {
+	display: none;
+
+	@media screen and (max-width: 992px) {
+		display: block;
+		width: 30px;
+		height: 30px;
+		background: url(../images/burger2.png) no-repeat;
+		position: absolute;
+		right: 20px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+
+		-webkit-background-size: contain;
+		background-size: contain;
+
+		&--open {
+			background-image: url(../images/burger-close2.png);
+		}
+	}
+}

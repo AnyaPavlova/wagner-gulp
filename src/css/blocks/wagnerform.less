@@ -1,0 +1,53 @@
+.wagnerform {
+	position: relative;
+
+	&__btn {
+		width: 100%;
+		margin-bottom: 10px;
+		transition: all 0.2s linear;
+
+		&:hover {
+			/*background-color: #faaa00;*/
+			opacity: 0.8;
+			transition: all 0.2s linear;
+		}
+	}
+
+	&__agree {
+		font-size: 11px;
+		text-align: center;
+	}
+	&__success {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background-color: #ffffff;
+
+		font-size: 23px;
+		line-height: 27px;
+		letter-spacing: -0.025em;
+		font-weight: 700;
+
+		text-align: center;
+		padding-top: 30%;
+
+		p {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.block-wagnerform {
+	min-width: 400px;
+	padding: 25px 28px 27px 28px;
+	border-radius: 5px;
+	background-color: #ffffff;
+
+	@media screen and (max-width: 500px) {
+		min-width: 300px;
+	}
+}

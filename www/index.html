@@ -1,21 +1,448 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Мой первый проект</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
-    <div class="promo">
-        <div class="promo__inner">
-            <h1 class="promo__ttl">Заголовок сайта</h1>
-            <p class="promo__slogan">Описание сайта, типа тут все самое офиггенное и опупенное</p>
-        </div>
-    </div>
+	<meta charset="UTF-8">
+	<title>Wagner</title>
 
-    <script src="scripts/script.js"></script>
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">	
+
+	<meta content="width=device-width, user-scalable=1, initial-scale=1" name="viewport" />
+</head>
+
+<body>	
+
+	<header class="header">
+		<div class="main-info">
+			<div class="inner main-info__inner">
+				<div class="main-info__line">
+					<div class="main-info__logo">
+						<a href="#"><img src="images/logo.png" alt="Логотип"></a>
+					</div>
+					<a href="#" class="burger" id="burger"></a>
+				</div>				
+				<div class="main-info__addresses">
+					<div class="main-info__address">Фольксваген Центр Таллинский</div>
+					<div class="main-info__address">Фольксваген Центр Пулково</div>
+					<div class="main-info__address">Фольксваген Центр Лахта</div>
+					<div class="main-info__dealer">Официальный дилер Volkswagen</div>
+				</div>
+				<div class="main-info__contact">
+					<div class="main-info__phone"><a href="tel:+78126046284">+7 812 604 62 84</a> - <span class="bluecolor">Таллинский</span></div>
+					<div class="main-info__phone"><a href="tel:+78126046285">+7 812 604 62 85</a> - <span class="bluecolor">Пулково</span></div>
+					<div class="main-info__phone"><a href="tel:+78126046283">+7 812 604 62 83</a> - <span class="bluecolor">Лахта</span></div>
+				</div>
+				<div class="main-info__btns">
+					<a href="#wagnerform" class="btn modal-form" onClick="document.getElementById('formSubject').value='Обратный звонок'; document.getElementById('nameform').innerHTML='Обратный звонок'">Обратный звонок</a>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="inner menu__inner">
+				<nav class="main-menu">
+					<ul class="main-menu__list">								
+						<li class="main-menu__item"><a href="amarok.html" class="main-menu__link">Amarok</a></li>
+						<li class="main-menu__item"><a href="caddy.html" class="main-menu__link">Caddy</a></li>
+						<li class="main-menu__item"><a href="caravelle.html" class="main-menu__link">Caravelle</a></li>
+						<li class="main-menu__item"><a href="crafter.html" class="main-menu__link">Crafter</a></li>
+						<li class="main-menu__item"><a href="multivan.html" class="main-menu__link">Multivan</a></li>
+						<li class="main-menu__item"><a href="transporter.html" class="main-menu__link">Transporter</a></li>
+					</ul>
+				</nav>	
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		
+		<section class="promo">
+			<div class="inner">
+				<div class="promo-banner">
+					<h1 class="promo-banner__title">Кредит или лизинг <br>по общим правилам!</h1>
+					<p class="promo-banner__subtitle">Вам остаётся только выбрать!</p>
+					<p class="promo-banner__conditions">Платеж <span class="promo-banner__conditions--small">от</span> <span class="promo-banner__main">10 000<sup>*</sup><span class="promo-banner__ruble ruble-icon">c</span></span></p>
+				</div>
+
+				<div class="promo-form">
+
+					<form action="jquery-mailer.php" method="post" class="wagnerform">	
+						<p class="promo-form__title">Узнайте первым о нашем лучшем предложении,  отправляйте заявку прямо сейчас!</p>
+
+						<input type="hidden" value="wagnerform" name="formType"/>
+						<input type="hidden" value="Форма в блоке Promo" name="formSubject"/>
+						<input class="wagnerform__input" type="text" name="name" placeholder="Ваше Имя*">	
+						<input id="input_phone" class="wagnerform__input" type="tel" name="phone" placeholder="Ваш Телефон*">	
+						<div class="wagnerform__ForSelect">
+							<select class="wagnerform__select" name="selection-center">
+			                      <option value="Выберите дилерский центр" style="display:none">Выберите дилерский центр</option>
+			                      <option value="Фольксваген Центр Таллинский">Фольксваген Центр Таллинский</option>
+			                      <option value="Фольксваген Центр Пулково">Фольксваген Центр Пулково</option>
+			                      <option value="Фольксваген Центр Лахта">Фольксваген Центр Лахта</option>
+			                </select>
+		                </div>  
+							
+						<button class="btn wagnerform__btn" type="submit">Отправить</button>
+
+						<p class="wagnerform__agree">Я согласен с <a href="#">условиями обработки персональных данных.</a></p>
+							
+						<div class='wagnerform__success block_success'><p>Спасибо, ваше сообщение отправлено!</p> <p>Мы свяжемся с Вами в ближайшее время</p></div>			
+					</form>	
+
+				</div>
+
+			</div>
+		</section>
+
+		<section class="block-models">
+			<div class="inner">
+				<h2 class="block-models__title">Какую модель Volkswagen выбирете  Вы?</h2>
+				<div class="models">
+
+					<div class="model">
+						<div class="model__title">Caddy</div>
+						<a href="#wagnerform" class="model__btn-testdrive modal-form" onClick="document.getElementById('formSubject').value='Записаться на тест-драйв модели Caddy'; document.getElementById('nameform').innerHTML='Записаться на тест-драйв Caddy'">Записаться на тест-драйв</a>
+						<div class="model__amount"><span>18</span> Авто в наличии</div>
+						<div class="model__photo"><img src="images/caddy-prev.jpg" alt="Caddy"></div>
+						<table class="model__tab">
+							<tr class="model__tr-name">
+								<td>Авто в наличии</td>
+								<td>Трейд-ин</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td><a href="#wagnerform" class="modal-form" onClick="document.getElementById('formSubject').value='Узнать подробнее Caddy'">Узнать подробнее</a></td>
+								<td>50 000<span class="ruble-icon">c</span></td>
+							</tr>
+							<tr class="model__tr-name">
+								<td>Кредит или лизинг</td>
+								<td>Выгода ДО</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td>10 000<span class="ruble-icon">c</span></td>
+								<td>159 000<span class="ruble-icon">c</span></td>
+							</tr>
+						</table>
+						<div class="model-advantage">
+							<div class="model-advantage__text">Max выгода ДО/лизинг:</div>
+							<div class="model-advantage__price">175 000<span class="ruble-icon">c</span></div>
+						</div>
+						<div class="model__btns">
+							<a href="#wagnerform" class="btn btn-advantage modal-form" onClick="document.getElementById('formSubject').value='Получить выгоду Caddy'; document.getElementById('nameform').innerHTML='Получить выгоду для покупки Caddy'">Получить выгоду</a>
+							<a href="#wagnerform" class="btn-credit modal-form" onClick="document.getElementById('formSubject').value='Рассчитать кредит Caddy'; document.getElementById('nameform').innerHTML='Рассчитать кредит для покупки Caddy'">Рассчитать кредит</a>
+						</div>
+					</div>
+
+					<div class="model">
+						<div class="model__title">Amarok</div>
+						<a href="#wagnerform" class="model__btn-testdrive modal-form" onClick="document.getElementById('formSubject').value='Записаться на тест-драйв модели Amarok'; document.getElementById('nameform').innerHTML='Записаться на тест-драйв Amarok'">Записаться на тест-драйв</a>
+						<div class="model__amount"><span>7</span> Авто в наличии</div>
+						<div class="model__photo"><img src="images/amarok-prev.jpg" alt="Amarok"></div>
+						<table class="model__tab">
+							<tr class="model__tr-name">
+								<td>Авто в наличии</td>
+								<td>Трейд-ин</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td><a href="#wagnerform" class="modal-form" onClick="document.getElementById('formSubject').value='Узнать подробнее Amarok'; document.getElementById('nameform').innerHTML='Узнать подробнее Amarok'">Узнать подробнее</a></td>
+								<td>150 000<span class="ruble-icon">c</span></td>
+							</tr>
+							<tr class="model__tr-name">
+								<td>Кредит или лизинг</td>
+								<td>Выгода ДО</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td>14 000<span class="ruble-icon">c</span></td>
+								<td>387 000<span class="ruble-icon">c</span></td>
+							</tr>
+						</table>
+						<div class="model-advantage">
+							<div class="model-advantage__text">Max выгода ДО/лизинг:</div>
+							<div class="model-advantage__price">466 000<span class="ruble-icon">c</span></div>
+						</div>
+						<div class="model__btns">
+							<a href="#wagnerform" class="btn btn-advantage modal-form" onClick="document.getElementById('formSubject').value='Получить выгоду Amarok'; document.getElementById('nameform').innerHTML='Получить выгоду для покупки Amarok'">Получить выгоду</a>
+							<a href="#wagnerform" class="btn-credit modal-form" onClick="document.getElementById('formSubject').value='Рассчитать кредит Amarok'; document.getElementById('nameform').innerHTML='Рассчитать кредит для покупки Amarok'">Рассчитать кредит</a>
+						</div>
+					</div>
+
+					<div class="model">
+						<div class="model__title">Caravelle</div>
+						<a href="#wagnerform" class="model__btn-testdrive modal-form" onClick="document.getElementById('formSubject').value='Записаться на тест-драйв модели Caravelle'; document.getElementById('nameform').innerHTML='Записаться на тест-драйв Caravelle'">Записаться на тест-драйв</a>
+						<div class="model__amount"><span>37</span> Авто в наличии</div>
+						<div class="model__photo"><img src="images/caravelle-prev.jpg" alt="Caravelle"></div>
+						<table class="model__tab">
+							<tr class="model__tr-name">
+								<td>Авто в наличии</td>
+								<td>Трейд-ин</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td><a href="#wagnerform" class="modal-form" onClick="document.getElementById('formSubject').value='Узнать подробнее Caravelle'; document.getElementById('nameform').innerHTML='Узнать подробнее Caravelle'">Узнать подробнее</a></td>
+								<td>120 000<span class="ruble-icon">c</span></td>
+							</tr>
+							<tr class="model__tr-name">
+								<td>Кредит или лизинг</td>
+								<td>Выгода ДО</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td>15 000<span class="ruble-icon">c</span></td>
+								<td>351 000<span class="ruble-icon">c</span></td>
+							</tr>
+						</table>
+						<div class="model-advantage">
+							<div class="model-advantage__text">Max выгода ДО/лизинг:</div>
+							<div class="model-advantage__price">450 000<span class="ruble-icon">c</span></div>
+						</div>
+						<div class="model__btns">
+							<a href="#wagnerform" class="btn btn-advantage modal-form" onClick="document.getElementById('formSubject').value='Получить выгоду Caravelle'; document.getElementById('nameform').innerHTML='Получить выгоду для покупки Caravelle'">Получить выгоду</a>
+							<a href="#wagnerform" class="btn-credit modal-form" onClick="document.getElementById('formSubject').value='Рассчитать кредит Caravelle'; document.getElementById('nameform').innerHTML='Рассчитать кредит для покупки Caravelle'">Рассчитать кредит</a>
+						</div>
+					</div>
+
+					<div class="model">
+						<div class="model__title">Transporter</div>
+						<a href="#wagnerform" class="model__btn-testdrive modal-form" onClick="document.getElementById('formSubject').value='Записаться на тест-драйв модели Transporter'; document.getElementById('nameform').innerHTML='Записаться на тест-драйв Transporter'">Записаться на тест-драйв</a>
+						<div class="model__amount"><span>2</span> Авто в наличии</div>
+						<div class="model__photo"><img src="images/transporter-prev.jpg" alt="Transporter"></div>
+						<table class="model__tab">
+							<tr class="model__tr-name">
+								<td>Авто в наличии</td>
+								<td>Трейд-ин</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td><a href="#wagnerform" class="modal-form" onClick="document.getElementById('formSubject').value='Узнать подробнее Transporter'; document.getElementById('nameform').innerHTML='Узнать подробнее Transporter'">Узнать подробнее</a></td>
+								<td>120 000<span class="ruble-icon">c</span></td>
+							</tr>
+							<tr class="model__tr-name">
+								<td>Кредит или лизинг</td>
+								<td>Выгода ДО</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td>15 000<span class="ruble-icon">c</span></td>
+								<td>274 000<span class="ruble-icon">c</span></td>
+							</tr>
+						</table>
+						<div class="model-advantage">
+							<div class="model-advantage__text">Max выгода ДО/лизинг:</div>
+							<div class="model-advantage__price">340 000<span class="ruble-icon">c</span></div>
+						</div>
+						<div class="model__btns">
+							<a href="#wagnerform" class="btn btn-advantage modal-form" onClick="document.getElementById('formSubject').value='Получить выгоду Transporter'; document.getElementById('nameform').innerHTML='Получить выгоду для покупки Transporter'">Получить выгоду</a>
+							<a href="#wagnerform" class="btn-credit modal-form" onClick="document.getElementById('formSubject').value='Рассчитать кредит Transporter'; document.getElementById('nameform').innerHTML='Рассчитать кредит для покупки Transporter'">Рассчитать кредит</a>
+						</div>
+					</div>
+
+					<div class="model">
+						<div class="model__title">Multivan</div>
+						<a href="#wagnerform" class="model__btn-testdrive modal-form" onClick="document.getElementById('formSubject').value='Записаться на тест-драйв модели Multivan'; document.getElementById('nameform').innerHTML='Записаться на тест-драйв Multivan'">Записаться на тест-драйв</a>
+						<div class="model__amount"><span>12</span> Авто в наличии</div>
+						<div class="model__photo"><img src="images/multivan.jpg" alt="Multivan"></div>
+						<table class="model__tab">
+							<tr class="model__tr-name">
+								<td>Авто в наличии</td>
+								<td>Трейд-ин</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td><a href="#wagnerform" class="modal-form" onClick="document.getElementById('formSubject').value='Узнать подробнее Multivan'; document.getElementById('nameform').innerHTML='Узнать подробнее Multivan'">Узнать подробнее</a></td>
+								<td>200 000<span class="ruble-icon">c</span></td>
+							</tr>
+							<tr class="model__tr-name">
+								<td>Кредит или лизинг</td>
+								<td>Выгода ДО</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td>20 000<span class="ruble-icon">c</span></td>
+								<td>648 000<span class="ruble-icon">c</span></td>
+							</tr>
+						</table>
+						<div class="model-advantage">
+							<div class="model-advantage__text">Max выгода ДО/лизинг:</div>
+							<div class="model-advantage__price">704 000<span class="ruble-icon">c</span></div>
+						</div>
+						<div class="model__btns">
+							<a href="#wagnerform" class="btn btn-advantage modal-form" onClick="document.getElementById('formSubject').value='Получить выгоду Multivan'; document.getElementById('nameform').innerHTML='Получить выгоду для покупки Multivan'">Получить выгоду</a>
+							<a href="#wagnerform" class="btn-credit modal-form" onClick="document.getElementById('formSubject').value='Рассчитать кредит Multivan'; document.getElementById('nameform').innerHTML='Рассчитать кредит для покупки Multivan'">Рассчитать кредит</a>
+						</div>
+					</div>
+
+					<div class="model">
+						<div class="model__title">Crafter</div>
+						<a href="#wagnerform" class="model__btn-testdrive modal-form" onClick="document.getElementById('formSubject').value='Записаться на тест-драйв модели Crafter'; document.getElementById('nameform').innerHTML='Записаться на тест-драйв Crafter'">Записаться на тест-драйв</a>
+						<div class="model__amount"><span>3</span> Авто в наличии</div>
+						<div class="model__photo"><img src="images/crafter-prev.jpg" alt="Crafter"></div>
+						<table class="model__tab">
+							<tr class="model__tr-name">
+								<td>Авто в наличии</td>
+								<td>Трейд-ин</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td><a href="#wagnerform" class="modal-form" onClick="document.getElementById('formSubject').value='Узнать подробнее Crafter'; document.getElementById('nameform').innerHTML='Узнать подробнее Crafter'">Узнать подробнее</a></td>
+								<td>170 000<span class="ruble-icon">c</span></td>
+							</tr>
+							<tr class="model__tr-name">
+								<td>Кредит или лизинг</td>
+								<td>Выгода ДО</td>
+							</tr>
+							<tr class="model__tr-info">
+								<td>15 000<span class="ruble-icon">c</span></td>
+								<td>170 000<span class="ruble-icon">c</span></td>
+							</tr>
+						</table>
+						<div class="model-advantage">
+							<div class="model-advantage__text">Max выгода ДО/лизинг:</div>
+							<div class="model-advantage__price">470 000<span class="ruble-icon">c</span></div>
+						</div>
+						<div class="model__btns">
+							<a href="#wagnerform" class="btn btn-advantage modal-form" onClick="document.getElementById('formSubject').value='Получить выгоду Crafter'; document.getElementById('nameform').innerHTML='Получить выгоду для покупки Crafter'">Получить выгоду</a>
+							<a href="#wagnerform" class="btn-credit modal-form" onClick="document.getElementById('formSubject').value='Рассчитать кредит Crafter'; document.getElementById('nameform').innerHTML='Рассчитать кредит для покупки Crafter'">Рассчитать кредит</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="dealer">
+			<div class="inner">
+				<div class="dealer__info">
+					<h2 class="dealer__title">Официальный дилер <br>Volkswagen</h2>
+					<p class="dealer__text">Группа официальных дилеров Wagner объединяет три автоцентра марки Volkswagen: Фольксваген Центры Таллинский, Пулково и Лахта. На сегодняшний момент в Санкт-Петербурге только им присвоен статус Фольксваген Центров. Это почетное звание подтверждает полное соответствие высоким требованиям производителя по всем направлениям деятельности, уровню сервиса и архитектурным стандартам.</p>
+				</div>
+				<div class="dealer__photo">
+					<div id="photo-carousel" class="photo__carousel owl-carousel">
+						<div class="photo__item"><a href="images/slide01.jpg" class="photo-modal" rel="gal"><img src="images/slide01.jpg" alt="Фото"></a></div>
+						<div class="photo__item"><a href="images/slide02.jpg" class="photo-modal" rel="gal"><img src="images/slide02.jpg" alt="Фото"></a></div>
+						<div class="photo__item"><a href="images/slide03.jpg" class="photo-modal" rel="gal"><img src="images/slide03.jpg" alt="Фото"></a></div>
+						<div class="photo__item"><a href="images/slide04.jpg" class="photo-modal" rel="gal"><img src="images/slide04.jpg" alt="Фото"></a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="block-centers">
+			<div class="inner">
+				<div id="centers-carousel" class="centers owl-carousel off">
+
+					<div class="center">
+						<div class="center__map">
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7401726abc399a1bb59962344793f49fdad3fff334cba71eee41c9021b04b591&amp;width=100%&amp;height=190&amp;lang=ru_RU&amp;scroll=false"></script>
+						</div>
+						<div class="center__info">
+							<p class="center__title">Фольксваген Центр Таллинский на Таллинском шоссе</p>
+							<div class="center-contacts">
+								<p class="center-contacts__item center-contacts__item--phone"><a href="tel:+78123284444">+7 (812) 328-4444</a></p>
+								<p class="center-contacts__item center-contacts__item--place">Санкт-Петербург, Таллинское шоссе, 157, лит. А</p>
+								<p class="center-contacts__item center-contacts__item--email"><a href="mailto:tallinsky@vw-petersburg.ru">tallinsky@vw-petersburg.ru</a></p>
+								<p class="center-contacts__item center-contacts__item--time">ежедневно: 09:00-21:00</p>
+							</div>
+							<div class="center__text">«Автоцентр «Таллинский» является одним из крупнейших,  с площадью шоу-рума 1 565 м2 , и представляет весь  модельный ряд легковых и коммерческих автомобилей Volkswagen.</div>
+							<div class="center__btn">
+								<a href="#wagnerform" class="btn modal-form" onClick="document.getElementById('formSubject').value='Обратный звонок Таллинский';  document.getElementById('selectionCenter').value='Фольксваген Центр Таллинский'; document.getElementById('nameform').innerHTML='Обратный звонок Таллинский'">Обратный звонок</a>
+							</div>
+						</div>
+					</div>	
+
+					<div class="center">
+						<div class="center__map">
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A84e545d3951e412a074a5a751ad16381a8f498848c1b5b5fbaec5a6d6b5a3414&amp;width=100%&amp;height=190&amp;lang=ru_RU&amp;scroll=false"></script>
+						</div>
+						<div class="center__info">
+							<p class="center__title">Фольксваген Центр Лахта на улице Оптиков</p>
+							<div class="center-contacts">
+								<p class="center-contacts__item center-contacts__item--phone"><a href="tel:+78123238888">+7 (812) 323-8888</a></p>
+								<p class="center-contacts__item center-contacts__item--place">Санкт-Петербург, Улица Оптиков, 3, лит. А</p>
+								<p class="center-contacts__item center-contacts__item--email"><a href="mailto:lahta@vw-petersburg.ru">lahta@vw-petersburg.ru</a></p>
+								<p class="center-contacts__item center-contacts__item--time">ежедневно: 09:00-21:00</p>
+							</div>
+							<div class="center__text">В 2013  году Фольксваген Центр Лахта вошел в тройку лучших  дилеров Volkswagen в России и стал дилером №1 в Санкт- Петербурге.</div>
+							<div class="center__btn">
+								<a href="#wagnerform" class="btn modal-form" onClick="document.getElementById('formSubject').value='Обратный звонок Лахта';  document.getElementById('selectionCenter').value='Фольксваген Центр Лахта'; document.getElementById('nameform').innerHTML='Обратный звонок Лахта'">Обратный звонок</a>	
+							</div>
+						</div>
+					</div>			
+
+					<div class="center">
+						<div class="center__map">
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A241d7506b5e7cf7b5b4125a9db6e7272a4cb4cb9b53b7caf1c849386499dff2a&amp;width=100%&amp;height=190&amp;lang=ru_RU&amp;scroll=false"></script>
+						</div>
+						<div class="center__info">
+							<p class="center__title">Фольксваген Центр Пулково на Стартовой улице</p>
+							<div class="center-contacts">
+								<p class="center-contacts__item center-contacts__item--phone"><a href="tel:+78123317777">+7 (812) 331-7777</a></p>
+								<p class="center-contacts__item center-contacts__item--place">Санкт-Петербург, Стартовая улица, 5, лит. А</p>
+								<p class="center-contacts__item center-contacts__item--email"><a href="mailto:pulkovo@vw-petersburg.ru">pulkovo@vw-petersburg.ru</a></p>
+								<p class="center-contacts__item center-contacts__item--time">ежедневно: 09:00-21:00</p>
+							</div>
+							<div class="center__text">ФЦ Пулково первым в России стал концептуальным  дилерским центром Volkswagen и в 2006 году получил  право носить название Фольксваген Центр Пулково.</div>
+							<div class="center__btn">
+								<a href="#wagnerform" class="btn modal-form" onClick="document.getElementById('formSubject').value='Обратный звонок Пулково';  document.getElementById('selectionCenter').value='Фольксваген Центр Пулково'; document.getElementById('nameform').innerHTML='Обратный звонок Пулково'">Обратный звонок</a>
+							</div>
+						</div>
+					</div>				
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer-info">
+			<div class="inner">
+				<div class="footer__text">Представленные на изображениях автомобили могут отличаться от серийных моделей. <br>
+				Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации о стоимости автомобилей, пожалуйста, обращайтесь к менеджерам отделов продаж официальных дилерских центров компании ООО «Фольксваген Груп Рус»- ООО «Автоцентр «Пулково», ООО «Автоцентр «Северо-Запад», ООО «Автоцентр «Таллинский».</div>
+				<div class="footer__btn"><a href="#" class="footer-info__intop">К началу</a></div>
+			</div>
+		</div>
+		<div class="footer-main">
+			<div class="inner">
+				
+				<div class="footer__links">
+					<a href="#" class="footer__link-item">Политика  конфиденциальности</a>
+					<a href="#" class="footer__link-item">Подробнее</a>
+				</div>
+				<div class="footer__copyright">© Volkswagen 2018</div>
+			</div>	
+		</div>
+	</footer>
+
+	<!-- Формы -->
+	<div id="wagnerform" style="display: none;" class="block-wagnerform">
+		
+		<form action="jquery-mailer.php" method="post" class="wagnerform">	
+
+			<input type="hidden" value="wagnerform" name="formType"/>
+			<input id="formSubject" type="hidden" name="formSubject" class="form__title" />
+
+			<p id="nameform" class="promo-form__title"></p>
+			<!-- <input id="formSubject" type="hidden" name="formSubject"/> -->
+
+			<input class="wagnerform__input" type="text" name="name" placeholder="Ваше Имя*">	
+			<input class="wagnerform__input" type="text" name="phone" placeholder="Ваш Телефон*">
+			<div class="wagnerform__ForSelect">	
+				<select id="selectionCenter" class="wagnerform__select" name="selection-center">
+	                <option value="Выберите дилерский центр" style="display:none">Выберите дилерский центр</option>
+	                <option value="Фольксваген Центр Таллинский">Фольксваген Центр Таллинский</option>
+	                <option value="Фольксваген Центр Пулково">Фольксваген Центр Пулково</option>
+	                <option value="Фольксваген Центр Лахта">Фольксваген Центр Лахта</option>
+	            </select>
+            </div>
+			
+			<button class="btn wagnerform__btn" type="submit">Отправить</button>
+			<p class="wagnerform__agree">Я согласен с <a href="#">условиями обработки персональных данных.</a></p>
+			
+			<div class='wagnerform__success block_success'><p>Спасибо, ваше сообщение отправлено!</p> <p>Мы свяжемся с Вами в ближайшее время</p></div>				
+		</form>	
+			
+	</div>
+	<!-- End Формы -->
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/script.js"></script>
+	<!--Подключаем отправщик писем -->
+	<script type="text/javascript" src="jquery-mailer.php"></script>
+	
 </body>
 </html>

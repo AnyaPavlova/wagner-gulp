@@ -1,0 +1,117 @@
+.owl-carousel.off {
+    display: block;
+}
+.block-centers {
+	padding-bottom: 78px;
+	padding-top: 40px;
+
+	&__title {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 70px;
+
+		@media screen and (max-width:680px) {
+			padding-top: 0;
+			padding-bottom: 35px;
+		}
+	}
+}
+.center {
+	display: block;
+	width: 31.4%;
+	margin-right: 2.9%;
+	float: left;
+	background-color: #f3f5f6;
+
+	&:last-child { margin-right: 0; }
+
+	&__map {
+		height: 190px;
+	}
+
+	@media screen and (max-width:854px) {
+		width: 100%;
+		float: none;
+	}	
+
+	&__info {
+		padding: 17px 30px 36px 30px;
+
+		@media screen and (max-width:500px) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 23px;
+		letter-spacing: -0.025em;
+		color: #1d1f20;
+		margin-bottom: 20px;
+	}
+	&__text {
+		min-height: 103px;
+		padding-bottom: 15px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+	&__btn .btn {
+		width: 100%;
+	}
+}
+
+.centers .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; 
+  position: absolute;
+    bottom: -35px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.centers .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;    
+}
+.centers .owl-dots .owl-dot span {
+	width: 13px;
+	height: 13px;
+	margin: 0px 4px;
+	background: #808890;
+	display: block;
+	border-radius: 3px; 
+}
+.centers .owl-dots .owl-dot.active span {
+	background: #0099da; 
+}
+.centers .owl-dots .owl-dot:hover span {
+	background: rgba(128,136,144,0.7);
+}
+
+.center-contacts {
+	padding-bottom: 18px;
+	border-bottom: 1px solid #dee1e3;
+	line-height: 23px;
+	font-size: 14px;
+	margin-bottom: 16px;
+
+	&__item {
+		padding-left: 25px;	
+		background-position: left center;
+		background-repeat: no-repeat;
+
+		&--phone {
+			background-image: url(../images/phone-icon.png);
+		}
+		&--place {
+			background-image: url(../images/place-icon.png);
+		}
+		&--email {
+			background-image: url(../images/email-icon.png);
+		}
+		&--time {
+			background-image: url(../images/time-icon.png);
+		}
+	}
+}

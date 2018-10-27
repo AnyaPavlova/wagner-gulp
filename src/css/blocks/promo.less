@@ -1,0 +1,136 @@
+.promo {
+	padding-top: 63px;
+	padding-bottom: 63px;
+	background: url(../images/promo-bg.jpg) left center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	@media screen and (max-width:1600px) {
+		background-position: left -170px;
+	}
+	@media screen and (max-width:1400px) {
+		background-position: left center;
+	}
+	@media screen and (max-width:992px) {
+		background: #2f3538;
+		padding-top: 0;
+		padding-bottom: 30px;
+
+		.inner {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+.promo-banner {
+	float: left;
+	width: 67.5%;
+	padding-left: 8%;
+
+	@media screen and (max-width:992px) {
+		width: 100%;
+		float: none;
+
+		background: url(../images/promo-bg.jpg) left center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+
+		padding: 35px 20px 60px;
+		position: relative;
+		z-index: 1;
+
+		&:before {
+			content: "";
+		    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(47,53,56,0) 80%, rgba(47,53,56,0.5) 95%, rgba(47,53,56,1) 100% ); /*От прозрачного к затемнению*/
+		    display: block;
+		    width: 100%;
+		    height: 100%;
+		    position: absolute;
+		    left: 0;    
+		    top: 0;
+		}
+	}
+	@media screen and (max-width:500px) {
+		background-position: -40px center;
+	}
+
+	&__subtitle {
+		font-size: 28px;
+		font-weight: 700;
+		color: #ffffff;
+		padding-left: 22.5%;
+		padding-top: 10px;
+
+		@media screen and (max-width:992px) {
+			padding-left: 35%;
+			padding-top: 20px;
+		}
+		@media screen and (max-width:500px) {
+			padding-left: 0;
+			font-size: 21px;
+			padding-top: 10px;
+		}
+	}
+	&__conditions {
+		font-size: 32px;
+		font-family: 'VWOffice', sans-serif;
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		color: #ffffff;
+		margin-top: 140px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background: url(../images/promo-conditions.png) left top no-repeat;
+
+		@media screen and (max-width:992px) {
+			margin-top: 130px;
+		}
+	}
+	&__conditions--small {
+		font-size: 21px;
+	}
+	&__main {
+		color: #faaa00;
+	}
+	&__ruble {
+		font-size: 21px;
+	}
+	sup {
+		font-size: 15px;
+	}
+}
+.promo-form {
+	float: left;
+	width: 32.5%;
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 25px 28px 27px 28px;
+
+	@media screen and (max-width:992px) {
+		width: ~"calc(100% - 40px)";
+		float: none;
+
+		margin-top: -30px;
+		margin-left: 20px;
+		margin-right: 20px;	
+
+		z-index: 2;
+		position: relative;
+	}
+	@media screen and (max-width:500px) {
+		padding: 13px 10px;
+
+		width: ~"calc(100% - 20px)";
+
+		margin-left: 10px;
+		margin-right: 10px;	
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 23px;
+		letter-spacing: -0.025em;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+}

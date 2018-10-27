@@ -1,5 +1,4 @@
-# student-startpack
-Простой сборщик на less для студентов базового курса
+# Wagner landing
 
 **Version 1.0.5**
 

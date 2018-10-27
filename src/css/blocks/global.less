@@ -1,0 +1,241 @@
+* {	
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	outline: none;
+}
+main,
+article,
+section,
+footer,
+header,
+aside,
+canvas {
+    display: block;
+}
+section,
+header,
+footer {
+    position: relative;
+}
+html {
+	height: 100%;
+}
+body {
+	min-width: 320px;
+	min-height: 100%;
+	background-color: #ffffff;
+
+	font-family: 'VWOffice', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.2;
+	letter-spacing: 0em;	
+	color: #2f3538;
+
+	position: relative;
+}
+.inner {
+	position: relative;
+	max-width: 1270px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	/*background-color: pink;*/
+	@media screen and (max-width: 500px) {
+		padding: 0 10px;
+	}
+}
+.inner:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+section:after {
+	content: '';
+    display: block;
+    clear: both;
+}
+h1 {
+	font-family: 'VWOffice', sans-serif;
+	font-size: 60px;
+	line-height: 65px;
+	letter-spacing: -0.025em;
+	font-weight: 700;
+	color: #ffffff;
+
+	@media screen and (max-width: 500px) {
+		font-size: 30px;
+		line-height: 33px;
+	}
+}
+h2 {
+	font-family: 'VWOffice', sans-serif;
+	font-size: 45px;
+	line-height: 65px;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	color: #1d1f20;
+
+	@media screen and (max-width:992px) {
+		line-height: 55px;
+	}
+
+	@media screen and (max-width: 500px) {
+		font-size: 23px;
+		line-height: 27px;
+	}
+}
+h3 {
+	font-family: 'VWOffice', sans-serif;
+	font-size: 18px;
+	line-height: 23px;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	color: #1d1f20;
+}
+a {
+	text-decoration: none;
+	color: #0099da;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+strong {
+	font-weight: 700;
+	letter-spacing: -0.025em;
+}
+button {
+	font-family: 'VWOfficeBold', sans-serif;
+
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0em;	
+	color: #ffffff;
+
+	display: inline-block;	
+
+	text-align: center;
+	text-decoration: none;
+
+	cursor: pointer;
+}
+input, textarea {
+	font-family: 'VWOffice', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #2f3538;
+	/*color: #808890;*/
+	letter-spacing: 0;
+
+	display: block;	
+	padding-left: 12px;
+
+	border: 1px solid #dee1e3;
+
+	width: 100%;
+	margin-bottom: 15px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	border-radius: 5px;
+}
+input:hover,
+input:focus,
+textarea:focus {
+	border: 1px solid #0099da;
+  	box-shadow: 1px 1px 5px 0px rgba(0, 153, 218, 0.25);
+}
+input::-webkit-input-placeholder {color:#808890; opacity: 1;}
+input::-moz-placeholder          {color:#808890; opacity: 1;}/* Firefox 19+ */
+input:-moz-placeholder           {color:#808890; opacity: 1;}/* Firefox 18- */
+input:-ms-input-placeholder      {color:#808890; opacity: 1;}
+
+/*Select*/
+select {	
+	font-family: 'VWOffice', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #808890;
+	letter-spacing: 0;
+
+	display: block;	
+	padding-left: 12px;	
+	border: 1px solid #dee1e3;
+	border-radius: 5px;
+
+	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 12px;	
+
+	background-color: transparent;
+	display: inline-block;	
+
+	cursor: pointer;
+
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none !important;
+
+    background-color: #ffffff;
+
+}
+select::-ms-expand {
+    display: none;
+}
+select:focus {
+	border: 1px solid #0099da;
+  	box-shadow: 1px 1px 5px 0px rgba(0, 153, 218, 0.25);
+}
+.wagnerform__ForSelect {
+	position: relative;
+	margin-bottom: 15px;	
+}
+.wagnerform__ForSelect:before {
+    position: absolute;
+    top: 0;
+    right: 13px;
+    bottom: 0;
+    width: 13px;
+    height: 8px;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    background-image: url(../images/select-icon.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+   	background-color: #fff;
+
+}
+/*****************/
+.bluecolor {
+	color: #0099da;
+}
+.btn {
+	font-size: 14px;
+	color: #ffffff;
+	font-family: 'VWOfficeBold', sans-serif;
+	background-color: #0099da;
+	border-radius: 5px;
+	padding: 14px 40px;
+	line-height: 1;
+	display: inline-block;
+	transition: all 0.2s linear;
+	text-align: center;
+
+	&:hover {
+		text-decoration: none;
+		opacity: 0.8;
+		transition: all 0.2s linear;
+	}
+}
+/**/
+.closeblock {
+	display: none;
+}
+.header {
+	z-index: 1;
+}

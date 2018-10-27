@@ -1,0 +1,112 @@
+.menu {
+	background-color: #f3f5f6;
+
+	@media screen and (max-width:992px) {
+		display: none;
+
+		&--open {
+			display: block;
+			padding-bottom: 65px;
+
+			&:before {
+				content: 'Выберите модель:';
+				font-size: 14px;
+				color: #808890;
+				display: block;
+				background: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0) 25%);
+				text-align: center;
+				padding: 30px 0;
+			}
+		}
+
+	}
+
+	&__inner {
+		@media screen and (max-width:992px) {
+			padding: 0;
+		}
+	}
+}
+.main-menu {
+	width: 100%;
+
+	&__list {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+
+		@media screen and (max-width:992px) {
+			display: block;
+		}
+	}
+	&__item {
+		display: table-cell;	
+
+		@media screen and (max-width:992px) {
+			display: block;
+		}	
+	}
+	&__link {
+		display: block;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		color: #1d1f20;
+		text-align: center;
+		line-height: 1;
+		position: relative;
+		&:after {
+			content: '';
+			width: 1px; 
+			height: 74%;
+			background-color: #dee1e3;
+			position: absolute;
+			display: block;
+			right: 0;
+			top: 13%;
+
+			@media screen and (max-width:992px)  {
+				width: 90%;
+				height: 1px;
+				left: 0;
+				right: 0;
+				top: auto;
+				bottom: 0;
+				margin: auto;
+			}
+		}
+
+		&:hover,
+		&--active {
+			text-decoration: none;
+			background-color: #0099da;
+			color: #ffffff;
+
+			&:after {
+				display: none;
+			}
+		}		
+	}	
+}
+.main-menu__item:last-child {
+	.main-menu__link:after {
+		display: none;
+	}
+}
+
+@media screen and (max-width:992px) {
+	.main-menu__item:first-child .main-menu__link:before {
+		content: '';
+		background-color: #dee1e3;
+		position: absolute;
+		display: block;
+		width: 90%;
+		height: 1px;
+		left: 0;
+		right: 0;
+		top: 0;
+		margin: auto;
+	}
+}
